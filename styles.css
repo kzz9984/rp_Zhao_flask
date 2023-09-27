@@ -22,10 +22,6 @@
     background-color: #5c659d;  /* footer background */
 }
 
-.howTo {
-    font-size: 20px;
-}
-
 .icon-white {
     color: #fff;
 }
@@ -55,6 +51,10 @@
 .procedure {
     background-color: #b1ebf7;
     padding: 30px;
+}
+
+.procedure p {
+    font-size: 25px;
 }
 
 .showcase {
