@@ -1,0 +1,95 @@
+/* --------------------------- Class --------------------------- */
+
+.about {
+    width: 400px;
+    margin: auto;
+}
+
+.about-team {
+    color: rgb(0, 0, 0);
+}
+
+.authors {
+    background-color: #b1ebf7;
+    padding: 30px;
+}
+
+.card-img-top {
+    height: 400px;
+}
+
+.footer {
+    background-color: #5c659d;  /* footer background */
+}
+
+.howTo {
+    font-size: 20px;
+}
+
+.icon-white {
+    color: #fff;
+}
+
+.nb-background-color {      /* navbar background color */
+    background-color: #5c659d;
+}
+
+.nbMenuItem {               /* navbar link text properties */
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.overview {
+    background-color: #b1ebf7;
+}
+
+.ovPadLeft {
+    padding-left: 20px;
+}
+
+.ovPadRight {
+    padding-right: 20px;
+}
+
+.procedure {
+    background-color: #b1ebf7;
+    padding: 30px;
+}
+
+.showcase {
+    background-color: #85b9da;
+}
+
+.table img {
+    max-width: 200px;
+    max-height: 150px;
+}
+
+/* ---------------------------- ID --------------------------- */
+
+/* ----------------- Underline Animation CSS ----------------- */
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    /*color: #0087ca;*/
+  }
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #eae6e6;
+    /*transform-origin: bottom right;*/
+    transition: transform 0.35s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    /*transform-origin: bottom left;*/
+}
+

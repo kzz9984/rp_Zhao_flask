@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Research Project</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+            integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous" defer></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+        <!-- lg = large breakpoint, navbar-light = make text dark, nb-background-color = custom css BG color -->
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <img src="img/icon.png" alt="Sleeping Fruit Fly Logo" class="d-inline-block align-text-top w-50">
+                </a>
+                
+                <!-- Hamburger Menu Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Collapsible navbar menu with custom hover underline CSS animation -->
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <!-- Links to hamburger menu button-->
+                    <ul class="navbar-nav ms-auto"> <!-- ms-auto provides auto margin spacing -->
+                        <li class="nav-item">
+                            <a href="authors.html" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="procedure.html" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="results.html" class="nav-link hover-underline-animation nbMenuItem">Results</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Showcase -->
+        <section class="showcase text-light p-2 text-center">   <!-- showcase is custom CSS -->
+            <!-- headerBG = custom css BG color, p-2 = padding 2 -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 p-0 d-flex align-items-center">
+                    <!-- img-fluid = won't expand image larger than the container and will scale down if needed -->
+                        <img src="img/heatmazetrial.png" alt="Flies in Heat Maze Arena" class="img-fluid">    <!-- w-50 = 50% -->
+                    </div>
+                    <div class="col-sm-6 p-0 d-flex align-items-center">
+                        <div class="container">
+                            <h1 class="display-4">The effect of age on the spatial learning capabilities of sleep-deprived <em>Drosophila</em></h1>
+                            <h2>Research Summary</h2>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="overview text-dark p-2 text-left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 p-3">
+                        <!-- p-3 = padding top -->
+                        <img src="img/brain.webp" alt="Holographic Brain" class="img-fluid">
+                    </div>
+                    <div class="col-sm-8 p-3">
+                        <h1 class="ovPadLeft">Background</h1>   <!-- ovPadLeft = custom padding left side -->
+                        <p class="lead overview-font ovPadLeft">The interrelated factors of sleep, aging, and cognitive function are crucial areas of research in today’s society. Lower sleep quality and quantity have a detrimental effect on an individual’s health and cognitive function. In particular, negative effects on cognitive function, which include decreases in learning capability, are one of the first effects to occur following sleep deprivation. Previous research has demonstrated that aging plays a significant role in sleep, with both human and animal studies indicating that older age contributes to both reduced sleep quality and quantity. Therefore, it is of interest to investigate how age influences the effect of sleep deprivation on daytime function.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 p-3">
+                        <h1 class="ovPadRight">Rationale</h1>   <!-- ovPadRight = custom padding right side -->
+                        <p class="lead overview-font ovPadLeft">Sleep is currently one of the most mysterious fields in science, and many of its functions and mechanisms, especially those that interact with age, remain unclear. Further research in this field will make possible the eventual development of appropriate methods for treating aging individuals that suffer from a lack of sleep. This is currently an issue of great relevance, as around half of the elderly population claims to have difficulties with sleep, with 30-48% of the elderly claiming to have symptoms of insomnia. Additionally, it has been shown that sleep in old age is difficult to start and sustain. Therefore, gaining more information on the relationship between sleep deprivation, learning, and age is essential for improving the quality of life in older adults. 
+                        </p>
+                    </div>
+                    <div class="col-sm-4 p-3">
+                        <!-- pt - 3 = padding top -->
+                        <img src="img/sleepingwoman.jpg" alt="Elderly Woman Sleeping" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 p-3">
+                        <!-- pt - 3 = padding top -->
+                        <img src="img/heatmaze.webp" alt="Heat Maze Model" class="img-fluid">
+                    </div>
+                    <div class="col-sm-8 p-3">
+                        <h1 class="ovPadLeft">Research Practicum</h1>   <!-- ovPadLeft = custom padding left side -->
+                        <p class="lead overview-font ovPadLeft">The spatial learning abilities of <em>Drosophila</em> were measured using a heat maze, which is a spatial learning assay where the fly must locate a cool tile in an otherwise warm environment with the aid of visual cues on the walls that pair with the location of the cool tile. Under normal conditions, flies can improve their time at locating the cool tile using the visual cues over several trials, and they are also capable of retaining visual place memories for several hours. Flies’ average times in the heat maze worsened if they had been deprived of sleep the night prior. The objective of the present study was to determine whether this decrease in learning ability observed with the sleep-deprived flies is affected by the age of the fly. Sleep deprivation was predicted to impair the spatial learning capabilities of older flies more than that of younger flies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (requires Bootstrap icons CSS)-->
+        <footer class="p-5 footer text-light text-center position-relative">
+            <div class="container">
+                <p class="lead">Copyright &copy; 2023 Kevin Zhao</p>
+                <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                    <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>
