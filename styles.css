@@ -66,6 +66,11 @@
     max-height: 150px;
 }
 
+.results {
+    background-color: #b1ebf7;
+    padding: 30px;
+}
+
 /* ---------------------------- ID --------------------------- */
 
 /* ----------------- Underline Animation CSS ----------------- */
