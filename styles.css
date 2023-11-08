@@ -26,6 +26,14 @@
     color: #fff;
 }
 
+#myChart {
+    background-color: #d0d0d0;
+}
+
+#test{
+    background-color: #d0d0d0;
+}
+
 .nb-background-color {      /* navbar background color */
     background-color: #5c659d;
 }
