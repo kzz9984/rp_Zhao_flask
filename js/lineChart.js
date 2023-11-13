@@ -3,7 +3,8 @@
 */
 
 async function getData() {
-    const response = await fetch('../data/trial-times.csv');
+    const response = await fetch('/zhaoSE2324/data/trial-times.csv');
+    //const response = await fetch('../data/trial-times.csv');
     const data = await response.text();     // CSV is in TEXT format
 
     const trials = [];      // x-axis labels = trial numbers
@@ -59,61 +60,80 @@ async function createChart() {
                     label: 'Control Young',
                     data: data.CY,
                     fill: false,
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    borderWidth: 1
+                    backgroundColor: 'rgba(255, 203, 50, 1)',
+                    borderColor: 'rgba(255, 153, 0, 1)',
+                    borderWidth: 1,
+                    pointStyle: 'circle',
+                    pointRadius: 5,
+                    tension: 0.2
                 },
                 {
-                    label: 'Sleep-Deprived Young',
+                    label: 'SD Young',
                     data: data.SDY,
                     fill: false,
-                    backgroundColor: 'rgba(0, 102, 255, 0.2)',
-                    borderColor: 'rgba(0, 102, 255, 1)',
-                    borderWidth: 1
+                    backgroundColor: 'rgba(255, 116, 20, 1)',
+                    borderColor: 'rgba(255, 46, 0, 1)',
+                    borderWidth: 1,
+                    pointStyle: 'circle',
+                    pointRadius: 5,
+                    tension: 0.2
                 },
                 {
                     label: 'Control Middle',
                     data: data.CM,
                     fill: false,
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    borderWidth: 1
+                    backgroundColor: 'rgba(109, 158, 235, 1)',
+                    borderColor: 'rgba(59, 58, 235, 1)',
+                    borderWidth: 1,
+                    pointStyle: 'triangle',
+                    pointRadius: 5,
+                    tension: 0.2
                 },
                 {
-                    label: 'Sleep-Deprived Middle',
+                    label: 'SD Middle',
                     data: data.SDM,
                     fill: false,
-                    backgroundColor: 'rgba(0, 102, 255, 0.2)',
-                    borderColor: 'rgba(0, 102, 255, 1)',
-                    borderWidth: 1
+                    backgroundColor: 'rgba(50, 50, 255, 1)',
+                    borderColor: 'rgba(0, 0, 255, 1)',
+                    borderWidth: 1,
+                    pointStyle: 'triangle',
+                    pointRadius: 5,
+                    tension: 0.2
                 },
                 {
                     label: 'Control Old',
                     data: data.CO,
                     fill: false,
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    borderWidth: 1
+                    backgroundColor: 'rgba(106, 188, 79, 1)',
+                    borderColor: 'rgba(26, 128, 16, 1)',
+                    borderWidth: 1,
+                    pointStyle: 'rect',
+                    pointRadius: 5,
+                    tension: 0.2
                 },
                 {
-                    label: 'Sleep-Deprived Old',
+                    label: 'SD Old',
                     data: data.SDO,
                     fill: false,
-                    backgroundColor: 'rgba(0, 102, 255, 0.2)',
-                    borderColor: 'rgba(0, 102, 255, 1)',
-                    borderWidth: 1
+                    backgroundColor: 'rgba(59, 118, 39, 1)',
+                    borderColor: 'rgba(39, 78, 19, 1)',
+                    borderWidth: 1,
+                    pointStyle: 'rect',
+                    pointRadius: 5,
+                    tension: 0.2
                 }
             ]
         },
         options: {
-            responsive: true,   // Re-size based on screen size
-            scales: {           // Display options for x & y axes
+            responsive: true,               // Re-size based on screen size
+            maintainAspectRatio: false,     // For responsive charts (keeps original width/height aspect ratio)
+            scales: {                       // Display options for x & y axes
                 x: {
                     title: {
                         display: true,
-                        text: 'Trial #',   // x-axis title
-                        font: {            // font properties
-                            size: 20
+                        text: 'Trial #',    // x-axis title
+                        font: {             // font properties
+                            size: 16
                         }
                     },
                     ticks: {
@@ -125,17 +145,17 @@ async function createChart() {
                 y: {
                     title: {
                         display: true,
-                        text: 'Average Time to Cool Tile (seconds)',
+                        text: 'Average Time to Cool Tile (sec)',
                         font: {
-                            size: 20
+                            size: 16
                         }
                     },
                     ticks: {
                         callback: function(val, index) {
                             // Labeling of tick marks can be controlled by code and font size
-                            return index % 3 === 0 ? this.getLabelForValue(val) : '';
+                            return (index+1) % 2 === 0 ? this.getLabelForValue(val) : '';
                         },
-                        maxTicksLimit: 24,    // limit # of ticks
+                        maxTicksLimit: 20,    // limit # of ticks
                         font: {
                             size: 12
                         }
@@ -145,9 +165,9 @@ async function createChart() {
             plugins: {          // Display options
                 title: {
                     display: true,
-                    text: 'Average Spatial Learning Trial Times of Different Ages of Drosophila After a Night of Sleep Deprivation or Normal Sleep',
+                    text: 'Average Spatial Learning Trial Times of Different Ages of Drosophila After a Night of Sleep Deprivation (SD) or Normal Sleep',
                     font: {
-                        size: 24
+                        size: 20
                     },
                     padding: {
                         top: 10,
@@ -155,8 +175,15 @@ async function createChart() {
                     }
                 },
                 legend: {
-                    align: 'start',
-                    position: 'bottom'
+                    align: 'center',
+                    position: 'bottom',
+                    labels: {
+                        usePointStyle: true,
+                        padding: 20,
+                        font: {
+                            size: 16
+                        }
+                    }
                 }
             }
         }

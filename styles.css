@@ -18,16 +18,16 @@
     height: 400px;
 }
 
+.card.about {
+    min-height: 570px;
+}
+
 .footer {
     background-color: #5c659d;  /* footer background */
 }
 
 .icon-white {
     color: #fff;
-}
-
-#myChart {
-    background-color: #d0d0d0;
 }
 
 #test{
@@ -80,6 +80,21 @@
 }
 
 /* ---------------------------- ID --------------------------- */
+
+#chart-wrapper{
+    margin: auto;
+    padding: 30px; 
+    height: 60vh;
+    width:  80vw;
+    min-height: 400px;
+    background-color: whitesmoke !important;
+    justify-content: center;
+    align-items: center;
+}
+
+#myChart {
+    background-color: whitesmoke;
+}
 
 /* ----------------- Underline Animation CSS ----------------- */
 .hover-underline-animation {
