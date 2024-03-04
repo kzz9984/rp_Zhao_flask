@@ -3,7 +3,7 @@
 */
 
 async function getData() {
-    const response = await fetch('/rp_Zhao/data/trial-times.csv');
+    const response = await fetch("{{url_for('static', filename='/data/trial-times.csv')}}");
     //const response = await fetch('../data/trial-times.csv');
     const data = await response.text();     // CSV is in TEXT format
 

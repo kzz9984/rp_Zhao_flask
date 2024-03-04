@@ -11,7 +11,7 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
             integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -23,7 +23,7 @@
         <!-- lg = large breakpoint, navbar-light = make text dark, nb-background-color = custom css BG color -->
             <div class="container">
                 <a href="#" class="navbar-brand">
-                    <img src="img/icon.png" alt="Sleeping Fruit Fly Logo" class="d-inline-block align-text-top w-50">
+                    <img src="{{url_for('static', filename='/img/icon.png')}}" alt="Sleeping Fruit Fly Logo" class="d-inline-block align-text-top w-50">
                 </a>
                 
                 <!-- Hamburger Menu Button -->
@@ -36,13 +36,13 @@
                     <!-- Links to hamburger menu button-->
                     <ul class="navbar-nav ms-auto"> <!-- ms-auto provides auto margin spacing -->
                         <li class="nav-item">
-                            <a href="authors.html" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
+                            <a href="{{url_for('authors')}}" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
                         </li>
                         <li class="nav-item">
-                            <a href="procedure.html" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
+                            <a href="{{url_for('procedure')}}" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
                         </li>
                         <li class="nav-item">
-                            <a href="results.html" class="nav-link hover-underline-animation nbMenuItem">Results</a>
+                            <a href="{{url_for('results')}}" class="nav-link hover-underline-animation nbMenuItem">Results</a>
                         </li>
                     </ul>
                 </div>
@@ -56,7 +56,7 @@
                 <div class="row">
                     <div class="col-sm-6 p-0 d-flex align-items-center">
                     <!-- img-fluid = won't expand image larger than the container and will scale down if needed -->
-                        <img src="img/heatmazetrial.png" alt="Flies in Heat Maze Arena" class="img-fluid">    <!-- w-50 = 50% -->
+                        <img src="{{url_for('static', filename='/img/heatmazetrial.png)}}" alt="Flies in Heat Maze Arena" class="img-fluid">    <!-- w-50 = 50% -->
                     </div>
                     <div class="col-sm-6 p-0 d-flex align-items-center">
                         <div class="container">
@@ -74,7 +74,7 @@
                 <div class="row">
                     <div class="col-sm-4 p-3">
                         <!-- p-3 = padding top -->
-                        <img src="img/brain.webp" alt="Holographic Brain" class="img-fluid">
+                        <img src="{{url_for('static', filename='/img/brain.webp)}}" alt="Holographic Brain" class="img-fluid">
                     </div>
                     <div class="col-sm-8 p-3">
                         <h1 class="ovPadLeft">Background</h1>   <!-- ovPadLeft = custom padding left side -->
@@ -89,13 +89,13 @@
                     </div>
                     <div class="col-sm-4 p-3">
                         <!-- pt - 3 = padding top -->
-                        <img src="img/sleepingwoman.jpg" alt="Elderly Woman Sleeping" class="img-fluid">
+                        <img src="{{url_for('static', filename='/img/sleepingwoman.jpg)}}" alt="Elderly Woman Sleeping" class="img-fluid">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4 p-3">
                         <!-- pt - 3 = padding top -->
-                        <img src="img/heatmaze.webp" alt="Heat Maze Model" class="img-fluid">
+                        <img src="{{url_for('static', filename='/img/heatmaze.webp)}}" alt="Heat Maze Model" class="img-fluid">
                     </div>
                     <div class="col-sm-8 p-3">
                         <h1 class="ovPadLeft">Research Practicum</h1>   <!-- ovPadLeft = custom padding left side -->

@@ -11,7 +11,7 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
             integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -22,8 +22,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
         <!-- lg = large breakpoint, navbar-light = make text dark, nb-background-color = custom css BG color -->
             <div class="container">
-                <a href="index.html" class="navbar-brand">
-                    <img src="img/icon.png" alt="Sleeping Fruit Fly Logo" class="d-inline-block align-text-top w-50">
+                <a href="{{url_for('index')}}" class="navbar-brand">
+                    <img src="{{url_for('static', filename='/img/icon.png')}}" alt="Sleeping Fruit Fly Logo" class="d-inline-block align-text-top w-50">
                 </a>
                 
                 <!-- Hamburger Menu Button -->
@@ -36,13 +36,13 @@
                     <!-- Links to hamburger menu button-->
                     <ul class="navbar-nav ms-auto"> <!-- ms-auto provides auto margin spacing -->
                         <li class="nav-item">
-                            <a href="authors.html" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
+                            <a href="{{url_for('authors')}}" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
                         </li>
                         <li class="nav-item">
-                            <a href="procedure.html" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
+                            <a href="{{url_for('procedure')}}" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
                         </li>
                         <li class="nav-item">
-                            <a href="results.html" class="nav-link hover-underline-animation nbMenuItem">Results</a>
+                            <a href="{{url_for('results')}}" class="nav-link hover-underline-animation nbMenuItem">Results</a>
                         </li>
                     </ul>
                 </div>
@@ -61,7 +61,7 @@
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
                     <div class="card about">
-                        <img src="img/kevinzhao.png" alt="Kevin Zhao" class="card-img-top">
+                        <img src="{{url_for('static', filename='/img/kevinzhao.png')}}" alt="Kevin Zhao" class="card-img-top">
                         <div class="card-body">
                             <h4 class="card-title">Kevin Zhao</h4>
                             <h5>Research Practicum Student</h5>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="col">
                     <div class="card about">
-                        <img src="img/man2.jpg" alt="Craig Queenan" class="card-img-top">
+                        <img src="{{url_for('static', filename='/img/man2.jpg')}}" alt="Craig Queenan" class="card-img-top">
                         <div class="card-body">
                             <h4 class="card-title">Mr. Craig Queenan</h4>
                             <h5>Research Practicum Mentor</h5>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="col">
                     <div class="card about">
-                        <img src="img/woman2.jpg" alt="Dina Ellsworth" class="card-img-top">
+                        <img src="{{url_for('static', filename='/img/woman2.jpg')}}" alt="Dina Ellsworth" class="card-img-top">
                         <div class="card-body">
                             <h4 class="card-title">Dr. Dina Ellsworth</h4>
                             <h5>Research Practicum Mentor</h5>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="col">
                     <div class="card about">
-                        <img src="img/woman1.jpg" alt="Karen Brown" class="card-img-top">
+                        <img src="{{url_for('static', filename='/img/woman1.jpg')}}" alt="Karen Brown" class="card-img-top">
                         <div class="card-body">
                             <h4 class="card-title">Ms. Karen Brown</h4>
                             <h5>Data Analysis Teacher</h5>
